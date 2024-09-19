@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Elija entre estas tres opciones: 'Listar', 'DondeEstoy', 'QuienEstá'"
+read opcion
+
+case $opcion in
+	"Listar")
+	echo "El contenido del directorio actual es: `ls`"	
+	;;
+	"DondeEstoy")
+	echo "La ruta al directorio actual es: `pwd`"
+	;;
+	"QuienEstá")
+	echo "Los usuarios conectados son los siguientes: `who`"
+	;;
+esac
