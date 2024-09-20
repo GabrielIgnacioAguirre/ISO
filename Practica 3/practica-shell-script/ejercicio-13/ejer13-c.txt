@@ -1,0 +1,22 @@
+#!/bin/bash
+#El programa verifica si existe un archivo o directorio ingresado por parametro,#si el programa no existe lo crea.
+
+echo "Ingresa el archivo o directorio para verificar si existe, o crearlo"
+read nombre
+
+#-e: Verifica si un archivo o directorio existe.
+#-d: Verifica si es un directorio.
+#-f: Verifica si es un archivo regular.
+
+if [ -e $nombre ];  then
+	echo "El archivo existe"
+	if [ -f $nombre ]; then
+		echo "El un archivo regular"
+	else
+		echo "Es un directorio"
+	fi
+else
+	echo "El archivo no existe. Se procedera a crearse."
+	mkdir "$nombre"
+	echo "Archivo creado."
+fi

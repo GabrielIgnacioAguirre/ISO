@@ -1,0 +1,16 @@
+#!/bin/bash
+#Lista en pantalla el cuadrado de los primeros 100 numeros.
+
+echo "----Opcion 1----"
+for ((i=1;i<=100;i++)); do
+
+	cuadrado=$((i*i))
+	echo "El cuadrado de $i es: $cuadrado"
+done
+
+echo "----Opcion 2----"
+for i in {1..100}; do
+
+	cuadrado=$((i*i))
+	echo "El cuadrado de $i es: $cuadrado"
+done
